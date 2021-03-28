@@ -1,0 +1,31 @@
+{{define "main"}}
+
+<gallery-component></gallery-component>
+
+    <template id="gallery-template">
+        <head>
+            <link rel="stylesheet" href="/plugins/materialize.min.css">
+            <script type="text/javascript" src="/plugins/materialize.min.js"></script>
+        </head>
+        <div class="container">
+            <div id="images-container"></div>
+        </div>
+    </template>
+
+    <script type="module">
+        const template = $("#gallery-template")[0].content.cloneNode(true);
+        class GalleryComponent extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({mode: "open"});
+                const galleryData = {{.Site.Data.en.gallery}}
+                this.shadowRoot.appendChild(template);
+                this.shadowRoot.querySelector('#images-container').innerHTML = `
+                ${galleryData.images.map(el => (
+                    `<img src="${el}" height="80" weight="80"/>`
+                ))}`
+            }
+        }
+        window.customElements.define('gallery-component', GalleryComponent)
+    </script>
+{{end}}

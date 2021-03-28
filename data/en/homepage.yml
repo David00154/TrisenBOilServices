@@ -1,7 +1,7 @@
 ################################# Slider #####################################
 slider:
   enable : true
-  bg_image : "images/banner/banner-1.jpg"
+  bg_image : "images/gallery/img2.jpg"
   slider_item:
     # slider item loop
     - title : "TOSNL is independent Calibration and Mechanical Engineering Company. "
@@ -67,7 +67,7 @@ slider:
 about:
   enable : true
   title : "Trisenb Oil Services Nig. Ltd."
-  image : "images/content_img/img5.jpg"
+  image : "images/gallery/img12.png"
   content : "Trisenb Oil Services has been trained on enhancing skills of internal audit for IEC/ISO 17025 - 2015 general requirements for the competence of testing and calibration laboratory.
   Trisenb Oil Services has put in place quality system as derived from ISO 9001: 2015 (‘Criteria Regarding Company Management for the Quality and Company System’).
 
