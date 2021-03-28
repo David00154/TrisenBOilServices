@@ -2,7 +2,6 @@
 baseURL = "https://www.trisenboilservices.com/"
 title = "TrisenB Oil Services"
 theme = "educenter"
-themesDir = "./themes"
 # post pagination
 paginate = "6"
 # post excerpt
