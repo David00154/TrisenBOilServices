@@ -284,6 +284,21 @@ a h4:hover {
 }
 
 /* overlay */
+.overlay-page {
+  position: relative;
+}
+.overlay-page::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #4a4a55c9;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+
 .overlay {
   position: relative;
 }

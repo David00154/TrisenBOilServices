@@ -32,7 +32,7 @@
 
   <!--Favicon-->
   <link rel="shortcut icon" href="https://www.trisenboilservices.com/images/favicon.png" type="image/x-icon">
-  <link rel="icon" href="https://www.trisenboilservices.com/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
 
 </head><body>
 <!-- preloader start -->
@@ -157,7 +157,7 @@
 
 
 	
-<section class="page-title-section overlay" style="background-image: url('/images/banner/banner-1.jpg'),url('/images/content_img/img5.jpg');" >
+<section class="page-title-section overlay-page" style="background-image: url('/images/banner/banner-1.jpg'),url('/images/content_img/img5.jpg');" >
   <div class="container">
     <div class="row">
       <div class="col-md-8">
@@ -177,26 +177,105 @@
 
     <template id="gallery-template">
         <head>
-            <link rel="stylesheet" href="/plugins/materialize.min.css">
-            <script type="text/javascript" src="/plugins/materialize.min.js"></script>
+            <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css">
+            
+            <link rel="stylesheet" href="/plugins/bootstrap/lightbox.css">
+            
+            
+            
         </head>
-        <div class="container">
-            <div id="images-container"></div>
+        <div class="container" style="margin-top: 2rem;">
+            <div id="carousel-container">
+            </div>
         </div>
     </template>
 
     <script type="module">
+        
         const template = $("#gallery-template")[0].content.cloneNode(true);
         class GalleryComponent extends HTMLElement {
             constructor() {
                 super();
                 this.attachShadow({mode: "open"});
-                const galleryData = {"images":["/images/gallery/img1.jpg","/images/gallery/img2.jpg","/images/gallery/img3.jpg","/images/gallery/img4.jpg","/images/gallery/img5.jpg","/images/gallery/img6.jpg","/images/gallery/img7.jpg","/images/gallery/img9.jpg","/images/gallery/img10.jpg","/images/gallery/img11.jpg"]}
+                const galleryData = {"images":["images/gallery/img1.jpg","images/gallery/img2.jpg","images/gallery/img3.jpg","images/gallery/img4.jpg","images/gallery/img5.jpg","images/gallery/img6.jpg","images/gallery/img7.jpg","images/gallery/img9.jpg","images/gallery/img10.jpg","images/gallery/img11.jpg"]}
                 this.shadowRoot.appendChild(template);
-                this.shadowRoot.querySelector('#images-container').innerHTML = `
-                ${galleryData.images.map(el => (
-                    `<img src="${el}" height="80" weight="80"/>`
-                ))}`
+                console.log(this.shadowRoot.querySelector('#carousel-container'))
+                this.shadowRoot.querySelector('#carousel-container').innerHTML = `
+                
+                <div class="lightbox">
+                <div class="row">
+                    <div class="col-lg-6">
+                    <img
+                        src="/images/gallery/img1.jpg"
+                        data-mdb-img="https://mdbootstrap.com/img/Photos/Slides/1.jpg"
+                        alt="Lightbox image 1"
+                        style="height: 11.5%;"
+                        class="w-100 mb-2 mb-md-4 shadow-1-strong rounded"
+                    />
+                    <img
+                        src="/images/gallery/img2.jpg"
+                        data-mdb-img="https://mdbootstrap.com/img/Photos/Square/1.jpg"
+                        alt="Lightbox image 2"
+                        class="w-100 shadow-1-strong rounded mb-2 mb-md-4"
+                    />
+                    <img
+                        src="/images/gallery/img3.jpg"
+                        data-mdb-img="https://mdbootstrap.com/img/Photos/Slides/1.jpg"
+                        alt="Lightbox image 1"
+                        style="height: 11.5%;"
+                        class="w-100 mb-2 mb-md-4 shadow-1-strong rounded"
+                    />
+                    <img
+                        src="/images/gallery/img4.jpg"
+                        data-mdb-img="https://mdbootstrap.com/img/Photos/Square/1.jpg"
+                        alt="Lightbox image 2"
+                        class="w-100 shadow-1-strong rounded mb-2 mb-md-4"
+                    />
+                    <img
+                        src="/images/gallery/img5.jpg"
+                        data-mdb-img="https://mdbootstrap.com/img/Photos/Vertical/1.jpg"
+                        alt="Lightbox image 3"
+                        style="height: 11.5%;"
+                        class="w-100 shadow-1-strong rounded mb-2 mb-md-4"
+                    />
+                    </div>
+                    <div class="col-lg-6">
+                    <img
+                        src="/images/gallery/img6.jpg"
+                        data-mdb-img="https:
+                        alt="Lightbox image 3"
+                        class="w-100 shadow-1-strong rounded mb-2 mb-md-4"
+                    />
+                    <img
+                        src="/images/gallery/img7.jpg"
+                        data-mdb-img="https://mdbootstrap.com/img/Photos/Vertical/1.jpg"
+                        alt="Lightbox image 3"
+                        style="height: 11.5%;"
+                        class="w-100 shadow-1-strong rounded mb-2 mb-md-4"
+                    />
+                    <img
+                        src="/images/gallery/img9.jpg"
+                        data-mdb-img="https://mdbootstrap.com/img/Photos/Vertical/1.jpg"
+                        alt="Lightbox image 3"
+                        class="w-100 shadow-1-strong rounded mb-2 mb-md-4"
+                    />
+                    <img
+                        src="/images/gallery/img10.jpg"
+                        data-mdb-img="https://mdbootstrap.com/img/Photos/Vertical/1.jpg"
+                        alt="Lightbox image 3"
+                        style="height: 11.5%;"
+                        class="w-100 shadow-1-strong rounded mb-2 mb-md-4"
+                    />
+                    <img
+                        src="/images/gallery/img11.jpg"
+                        data-mdb-img="https://mdbootstrap.com/img/Photos/Vertical/1.jpg"
+                        alt="Lightbox image 3"
+                        class="w-100 shadow-1-strong rounded mb-2 mb-md-4"
+                    />
+                    </div>
+                </div>
+                </div>
+                `
             }
         }
         window.customElements.define('gallery-component', GalleryComponent)
