@@ -67,7 +67,7 @@
         <div class="col-lg-8 text-center text-lg-right">
           <ul class="list-inline">
             <li class="list-inline-item">
-              <a class="text-color mr-3" href="tel:&#43;211234565523"><strong>CALL : </strong> &#43;211234565523</a></li>
+              <a class="text-color mr-3" href="tel:&#43;234%280%298033386341"><strong>CALL : </strong> &#43;234(0)8033386341</a></li>
             <li class="list-inline-item">
               <a class="text-color" href="mailto:info@trisenboilservices.com"><strong>EMAIL : </strong> info@trisenboilservices.com</a></li>
           </ul>
@@ -173,113 +173,142 @@
 </section>
 	
 
-<gallery-component></gallery-component>
+<div class="container">
+    
 
-    <template id="gallery-template">
-        <head>
-            <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css">
-            
-            <link rel="stylesheet" href="/plugins/bootstrap/lightbox.css">
-            
-            
-            
-        </head>
-        <div class="container" style="margin-top: 2rem;">
-            <div id="carousel-container">
-            </div>
+    
+    <section class="mt-4">
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-4">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="/images/gallery/img1.jpg"
+              class="w-100" style="height: 467.76px;"
+            />
+            <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+            </a>
+          </div>
         </div>
-    </template>
 
-    <script type="module">
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-4">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="/images/gallery/img2.jpg"
+              class="w-100" style="height: 467.76px;"
+            />
+            <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-4">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="/images/gallery/img3.jpg"
+              class="w-100" style="height: 467.76px;"
+            />
+            <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-4">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="/images/gallery/img4.jpg"
+              class="w-100" style="height: 467.76px;"
+            />
+            <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+            </a>
+          </div>
+        </div>
+
         
-        const template = $("#gallery-template")[0].content.cloneNode(true);
-        class GalleryComponent extends HTMLElement {
-            constructor() {
-                super();
-                this.attachShadow({mode: "open"});
-                const galleryData = {"images":["images/gallery/img1.jpg","images/gallery/img2.jpg","images/gallery/img3.jpg","images/gallery/img4.jpg","images/gallery/img5.jpg","images/gallery/img6.jpg","images/gallery/img7.jpg","images/gallery/img9.jpg","images/gallery/img10.jpg","images/gallery/img11.jpg"]}
-                this.shadowRoot.appendChild(template);
-                console.log(this.shadowRoot.querySelector('#carousel-container'))
-                this.shadowRoot.querySelector('#carousel-container').innerHTML = `
-                
-                <div class="lightbox">
-                <div class="row">
-                    <div class="col-lg-6">
-                    <img
-                        src="/images/gallery/img1.jpg"
-                        data-mdb-img="https://mdbootstrap.com/img/Photos/Slides/1.jpg"
-                        alt="Lightbox image 1"
-                        style="height: 11.5%;"
-                        class="w-100 mb-2 mb-md-4 shadow-1-strong rounded"
-                    />
-                    <img
-                        src="/images/gallery/img2.jpg"
-                        data-mdb-img="https://mdbootstrap.com/img/Photos/Square/1.jpg"
-                        alt="Lightbox image 2"
-                        class="w-100 shadow-1-strong rounded mb-2 mb-md-4"
-                    />
-                    <img
-                        src="/images/gallery/img3.jpg"
-                        data-mdb-img="https://mdbootstrap.com/img/Photos/Slides/1.jpg"
-                        alt="Lightbox image 1"
-                        style="height: 11.5%;"
-                        class="w-100 mb-2 mb-md-4 shadow-1-strong rounded"
-                    />
-                    <img
-                        src="/images/gallery/img4.jpg"
-                        data-mdb-img="https://mdbootstrap.com/img/Photos/Square/1.jpg"
-                        alt="Lightbox image 2"
-                        class="w-100 shadow-1-strong rounded mb-2 mb-md-4"
-                    />
-                    <img
-                        src="/images/gallery/img5.jpg"
-                        data-mdb-img="https://mdbootstrap.com/img/Photos/Vertical/1.jpg"
-                        alt="Lightbox image 3"
-                        style="height: 11.5%;"
-                        class="w-100 shadow-1-strong rounded mb-2 mb-md-4"
-                    />
-                    </div>
-                    <div class="col-lg-6">
-                    <img
-                        src="/images/gallery/img6.jpg"
-                        data-mdb-img="https:
-                        alt="Lightbox image 3"
-                        class="w-100 shadow-1-strong rounded mb-2 mb-md-4"
-                    />
-                    <img
-                        src="/images/gallery/img7.jpg"
-                        data-mdb-img="https://mdbootstrap.com/img/Photos/Vertical/1.jpg"
-                        alt="Lightbox image 3"
-                        style="height: 11.5%;"
-                        class="w-100 shadow-1-strong rounded mb-2 mb-md-4"
-                    />
-                    <img
-                        src="/images/gallery/img9.jpg"
-                        data-mdb-img="https://mdbootstrap.com/img/Photos/Vertical/1.jpg"
-                        alt="Lightbox image 3"
-                        class="w-100 shadow-1-strong rounded mb-2 mb-md-4"
-                    />
-                    <img
-                        src="/images/gallery/img10.jpg"
-                        data-mdb-img="https://mdbootstrap.com/img/Photos/Vertical/1.jpg"
-                        alt="Lightbox image 3"
-                        style="height: 11.5%;"
-                        class="w-100 shadow-1-strong rounded mb-2 mb-md-4"
-                    />
-                    <img
-                        src="/images/gallery/img11.jpg"
-                        data-mdb-img="https://mdbootstrap.com/img/Photos/Vertical/1.jpg"
-                        alt="Lightbox image 3"
-                        class="w-100 shadow-1-strong rounded mb-2 mb-md-4"
-                    />
-                    </div>
-                </div>
-                </div>
-                `
-            }
-        }
-        window.customElements.define('gallery-component', GalleryComponent)
-    </script>
+  
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-4">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="/images/gallery/img6.jpg"
+              class="w-100" style="height: 467.76px;"
+            />
+            <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-4">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="/images/gallery/img7.jpg"
+              class="w-100" style="height: 467.76px;"
+            />
+            <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-4">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="/images/gallery/img9.jpg"
+              class="w-100" style="height: 467.76px;"
+            />
+            <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-4">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="/images/gallery/img10.jpg"
+              class="w-100" style="height: 467.76px;"
+            />
+            <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+            </a>
+          </div>
+        </div>
+
+        
+
+        
+    </section>
+    
+  
+    
+</div>
 
 <footer>
   
@@ -315,7 +344,7 @@
           <ul class="list-unstyled">
             <li class="mb-4">PLOT 217 ABULOMA ROAD FED. GOVT. GIRLS. COLLEDGE JUNCTION ABULOMA, PORT HARCOURT</li>
             <li class="mb-4"><a href="mailto:info@trisenboilservices.com">info@trisenboilservices.com</a></li>
-            <li class="mb-4">+211234565523</li>
+            <li class="mb-4">+234(0)8033386341</li>
           </ul>
         </div>
         
@@ -408,7 +437,7 @@
 
 <!-- Google Map API -->
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIHMXRZx5A7IAYKQ5fuH-OAZjmDSOp73A"></script>
 
 
 <!-- JS Plugins -->
