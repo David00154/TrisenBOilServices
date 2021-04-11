@@ -172,19 +172,19 @@ weight = 5
 
 [[Languages.en.menu.main]]
 weight = 3
-name = "More"
+name = "Portfolio"
 hasChildren = true
 
 
   [[Languages.en.menu.main]]
-  parent = "More"
+  parent = "Portfolio"
   name = "gallery"
   url = "gallery"
 
   [[Languages.en.menu.main]]
-  parent = "More"
-  name = "portfolio"
-  url = "portfolio"
+  parent = "Portfolio"
+  name = "jobs completed"
+  url = "jobs-completed"
   
 
 
